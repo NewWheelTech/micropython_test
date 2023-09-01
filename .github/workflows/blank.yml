@@ -44,7 +44,8 @@ jobs:
         shell: bash
         run: |
           make submodules
-          git apply ../../../pimoroni-pico/micropython/micropython_nano_specs.patch
+          git apply -v ../../../pimoroni-pico/micropython/micropython_nano_specs.patch
+          echo Patch Complete
       - name: cmake
         working-directory: ./micropython/ports/rp2
         shell: bash
