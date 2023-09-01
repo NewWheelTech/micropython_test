@@ -49,10 +49,6 @@ jobs:
         working-directory: ./micropython/ports/rp2
         shell: bash
         run: cmake -S . -B build-RPI_PICO -DPICO_BUILD_DOCS=0 -DUSER_C_MODULES=../../../pimoroni-pico/micropython/modules/micropython-pico.cmake -DMICROPY_BOARD_DIR=`pwd`/../../../pimoroni-pico/micropython/board/PICO/ -DMICROPY_BOARD=pico --fresh
-      - name: cmake
-        working-directory: ./micropython/ports/rp2
-        shell: bash
-        run: cmake -S . -B build-RPI_PICO -DPICO_BUILD_DOCS=0 -DUSER_C_MODULES=../../../pimoroni-pico/micropython/modules/micropython-pico.cmake -DMICROPY_BOARD_DIR=`pwd`/../../../pimoroni-pico/micropython/board/PICO/ -DMICROPY_BOARD=pico --fresh
       - name: cmake build
         working-directory: ./micropython/ports/rp2
         shell: bash
