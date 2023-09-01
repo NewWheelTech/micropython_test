@@ -39,10 +39,12 @@ jobs:
         run: source copy_script.sh
       - name: Install packages
         run: source micropython/tools/ci.sh && ci_rp2_setup
-      - name: Make Submdules
+      - name: Make Submodules and patch build script
         working-directory: ./micropython/ports/rp2
         shell: bash
-        run: make submodules
+        run: |
+          make submodules
+          git apply ../../../pimoroni-pico/micropython/micropython_nano_specs.patch
       - name: cmake
         working-directory: ./micropython/ports/rp2
         shell: bash
