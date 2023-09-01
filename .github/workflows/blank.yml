@@ -38,7 +38,7 @@ jobs:
         working-directory: ./pimoroni-pico-overrides
         run: source copy_script.sh
       - name: Install packages
-        run: source tools/ci.sh && ci_rp2_setup
+        run: source micropython/tools/ci.sh && ci_rp2_setup
       - name: Make Submdules
         working-directory: ./micropython/ports/rp2
         shell: bash
